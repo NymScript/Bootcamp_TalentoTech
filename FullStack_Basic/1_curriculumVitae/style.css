@@ -1,282 +1,239 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
-* 
-/* Este '*' afecta a todos los elementos de la página. */
-
-{
-    
+/* El selector '*' aplica a todos los elementos de la página */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
-    font-family: 'Poppins', sans-serif;
-
+    box-sizing: border-box; /* Incluye el padding y borde dentro del ancho y altura del elemento */
+    font-family: 'Poppins', sans-serif; /* Define la fuente de todo el documento */
 }
 
 body {
-    
-    background-color: #e4edf1;
+    background-color: #e4edf1; /* Color de fondo de la página */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    min-height: 100vh; /* La altura mínima es el 100% de la ventana */
 }
 
 .container {
-
+    /* Contenedor principal de la página */
     position: relative;
     width: 100%;
-    max-width: 1000px;
-    min-height: 100px;
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    min-height: 100px; /* Altura mínima del contenedor */
     background-color: white;
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
-
+    display: grid; /* Sistema de rejilla para dos columnas */
+    grid-template-columns: 1fr 2fr; /* Una columna más pequeña y otra más grande */
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1); /* Sombra del contenedor para darle profundidad */
 }
 
-.container .left_side{
-
+.container .left_side {
+    /* Sección izquierda con fondo oscuro */
     position: relative;
-    background: #003147;
-    padding: 40px;
-
+    background: #003147; /* Color azul oscuro */
+    padding: 40px; /* Espacio interno */
 }
 
 .profileText {
+    /* Texto del perfil en la parte izquierda */
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(225,255,255,0.2);
+    border-bottom: 1px solid rgba(225,255,255,0.2); /* Línea inferior tenue */
 }
 
 .profileText .imgBx {
-
+    /* Contenedor de la imagen de perfil */
     position: relative;
     width: 200px;
     height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-
+    border-radius: 50%; /* Hace la imagen circular */
+    overflow: hidden; /* Evita desbordes */
 }
 
 .profileText .imgBx img {
-
+    /* Estilo de la imagen de perfil */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-
-
+    object-fit: cover; /* La imagen se ajusta para cubrir el contenedor */
 }
 
 .profileText h2 {
-
-    color: #fff;
+    /* Título del perfil */
+    color: #fff; /* Texto blanco */
     font-size: 1.5em;
     margin-top: 20px;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
     text-align: center;
     font-weight: 600;
     line-height: 1.4em;
-
 }
 
 .profileText h2 span {
-
+    /* Subtítulo del perfil */
     font-size: 0.8em;
     font-weight: 300;
-
 }
 
 .contactInfo {
-
+    /* Sección de información de contacto */
     padding-top: 40px;
-
 }
 
 .title {
-
+    /* Título de cada sección (Contacto, Educación, etc.) */
     color: white;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 20px;
-    
 }
 
 .contactInfo ul {
-
-
+    /* Lista de contactos */
     position: relative;
-
 }
 
 .contactInfo ul li {
-
+    /* Elementos de la lista de contactos */
     position: relative;
-    list-style: none;
+    list-style: none; /* Elimina los marcadores de lista */
     margin: 10px 0;
-    cursor: pointer;
-
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el ítem */
 }
 
 .contactInfo ul li .icon {
-
+    /* Íconos de la lista de contacto */
     display: inline-block;
     width: 30px;
     font-size: 18px;
-    color: #03a9f4;
-
+    color: #03a9f4; /* Color azul para los íconos */
 }
 
 .contactInfo ul li span {
-
-     color: white;
-     font-weight: 300;
-
+    /* Texto de la lista de contacto */
+    color: white;
+    font-weight: 300;
 }
 
 .contactInfo.education li {
-
+    /* Estilo específico para la sección de Educación */
     margin-bottom: 15px;
-
 }
 
 .contactInfo.education h5 {
-
+    /* Fechas en la sección de Educación */
     color: #03a9f4;
     font-weight: 500;
-
-}
-
-.contactInfo.education h4:nth-child(2) {
-
-    color: #fff;
-    font-weight: 500;
-
 }
 
 .contactInfo.education h4 {
-
+    /* Nombre del título y lugar en Educación */
     color: #fff;
     font-weight: 300;
-
 }
 
 .contactInfo.language .percent {
-
+    /* Barra de porcentaje en la sección de Lenguas */
     position: relative;
     width: 100%;
     height: 6px;
     background: #081921;
     display: block;
     margin-top: 5px;
-
 }
 
-
 .contactInfo.language .percent div {
-
+    /* Relleno de la barra de porcentaje */
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     background: #03a9f4;
-
 }
 
-
 .container .rigth_side {
-
+    /* Sección derecha */
     position: relative;
     background-color: #fff;
     padding: 40px;
-
 }
 
 .about {
-
+    /* Secciones de perfil, experiencia, habilidades, etc. */
     margin-bottom: 50px;
-
 }
 
 .about:last-child {
-
+    /* Elimina el margen inferior de la última sección */
     margin-bottom: 0;
-
 }
 
 .title2 {
-
+    /* Título de cada sección en la parte derecha */
     color: #003147;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 15px;
-
 }
 
 p {
-
+    /* Estilo general de los párrafos */
     color: #333;
-
 }
 
 .about .box {
-
+    /* Contenedores para la experiencia y habilidades */
     display: flex;
     flex-direction: row;
     margin: 20px 0;
-
 }
 
 .about .box .year_company {
-
+    /* Fecha y empresa en la sección de experiencia */
     min-width: 220px;
-
 }
 
 .about .box .year_company h5 {
-
+    /* Año y compañía en la sección de experiencia */
     text-transform: uppercase;
     color: #848c90;
     font-weight: 600;
-
 }
 
 .about .box .text h4 {
-
-    text-transform:uppercase;
+    /* Títulos en la experiencia */
+    text-transform: uppercase;
     color: #2a7da2;
     font-size: 16px;
-
 }
 
 .skills .box {
-
+    /* Caja de habilidades */
     position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: 150px 1fr;
     justify-content: center;
     align-items: center;
-
 }
 
-.skills .box  h4{
-
+.skills .box h4 {
+    /* Título de cada habilidad */
     text-transform: uppercase;
     color: #848c90;
     font-weight: 500;
-
 }
 
 .skills .box .percent {
-
+    /* Barra de porcentaje para habilidades */
     position: relative;
     width: 100%;
     height: 10px;
@@ -284,79 +241,55 @@ p {
 }
 
 .skills .box .percent div {
-
+    /* Relleno de la barra de habilidades */
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     background: #2a7da2;
-
 }
 
 .interest ul {
-
+    /* Lista de intereses */
     display: grid;
     grid-template-columns: repeat(4,1fr);
-
 }
 
 .interest ul li {
-
+    /* Ítems de la lista de intereses */
     list-style: none;
     color: #333;
     font-weight: 500;
     margin: 10px 0;
-
 }
 
 .interest ul li .fa-solid {
-
+    /* Íconos en la sección de intereses */
     color: #2a7da2;
     font-size: 18px;
     width: 20px;
 }
 
-/* Responsive */
-
-@media (max-width: 1000px){
-
-    .container{
-
+/* Media query para pantallas medianas */
+@media (max-width: 1000px) {
+    .container {
         margin: 10px;
-        grid-template-columns: repeat(1,1fr);
-
+        grid-template-columns: repeat(1,1fr); /* Cambia a una columna */
     }
-
     .interest ul {
-
-        grid-template-columns: repeat(2,1fr);
-
+        grid-template-columns: repeat(2,1fr); /* Reduce a dos columnas */
     }
-
 }
 
-@media (max-width: 600px){
-
-    .about .box{
-        flex-direction: column;
-    }
-    .about .box .year_company{
-
-        min-width: 150px;
-        margin-bottom: 5px;
-
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .about .box {
+        flex-direction: column; /* Coloca los elementos uno debajo del otro */
     }
     .interest ul {
-
-        grid-template-columns: repeat(1,1fr);
-
+        grid-template-columns: repeat(1,1fr); /* Una sola columna */
     }
-
-
-    .skills .box{
-
-        grid-template-columns: repeat(1,1fr);
-
+    .skills .box {
+        grid-template-columns: repeat(1,1fr); /* Cambia a una sola columna */
     }
-
 }
